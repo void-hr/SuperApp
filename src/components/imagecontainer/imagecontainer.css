@@ -1,0 +1,25 @@
+.imagecontainer {
+    /* position: relative; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+    height: 100vh;
+    width: 50%;
+    background-image: url('../../assets/bgregis.png');
+    z-index: 50;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: bold;
+}
+
+.imagecontainer p {
+    /* position: absolute; */
+    /* bottom: 2rem; */
+    /* left: 2rem; */
+    font-size: 4rem;
+    color: white;
+    width: 80%;
+    /* font-family:  'Roboto', sans-serif; */
+}

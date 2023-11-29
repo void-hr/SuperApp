@@ -1,0 +1,105 @@
+.form_container{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-direction: column;
+    width: 60%;
+    
+}
+
+.logo{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+}
+.logo_text{
+    font-family: 'Single Day', cursive;
+    font-weight: normal;
+    font-size: 4rem;
+    color: #72DB73;
+    margin: 0;
+}
+.checkbox{
+    height: 2rem;
+    display: flex;
+    gap: 5px;
+    font-weight: normal;
+    font-size: la;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+    color:#7C7C7C;
+    justify-content: flex-start;
+    
+}
+
+input {
+    height: 2.25rem;
+    background-color: #292929;
+    border: none;
+    border-radius: 3.82px;
+    padding: 12px;
+    outline: none;
+    font-size: normal;
+    color: white;
+}
+
+input::-webkit-input-placeholder {
+    font-family: 'DM Sans', sans-serif;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='checkbox'] {
+    height: 1.2rem;
+    width: 1rem;
+}
+
+.signup {
+    border: none;
+    padding: 12px;
+    background-color: #72DB73;
+    margin-top: 2rem;
+    width: 100%;
+    border-radius: 28px;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+.t\&c {
+    color:#7C7C7C;
+    font-size: medium;
+    /* background: wheat; */
+    
+}
+
+.t\&c a {
+    color: #72DB73;
+    text-decoration: none;
+}
+
+.errors {
+    color: #FF0000;
+    font-size: smaller;
+    margin: 0;
+    
+}
+
+.input_error {
+    border: 1px solid #FF0000;
+}
