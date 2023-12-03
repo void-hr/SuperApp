@@ -1,7 +1,8 @@
+import SelectCategory from "../../components/SelectCategory/SelectCategory"
 
 const CategoryPage = () => {
   return (
-    <div className=""></div>
+    <SelectCategory />
   )
 }
 

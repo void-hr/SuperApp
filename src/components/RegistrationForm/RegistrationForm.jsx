@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import './registrationform.css'
 import { useNavigate } from 'react-router-dom';
 
@@ -47,14 +47,14 @@ const RegistrationForm = () => {
   }
  
 
-  useEffect(() => {
+ 
     const isFormFilled = Object.keys(formData).every((key) => formData[key] !== '');
     if(isFormFilled && formData.check && Object.keys(formErrorValues).length === 0) {
       localStorage.setItem('fornData', JSON.stringify(formData))
       navigate('/category')
     }
     
-  }, [formErrorValues, formData, navigate])
+  
 
   return (
     <div className='form_container'>
@@ -87,5 +87,3 @@ const RegistrationForm = () => {
 }
 
 export default RegistrationForm
-
-// DM SANS ROBOTO SINGLE DAY
