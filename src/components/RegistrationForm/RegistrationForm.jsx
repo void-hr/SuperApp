@@ -22,6 +22,11 @@ const RegistrationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrorValues(validate(formData,e));
+    const isFormFilled = Object.keys(formData).every((key) => formData[key] !== '');
+    if(isFormFilled && formData.check && Object.keys(formErrorValues).length === 0) {
+      localStorage.setItem('fornData', JSON.stringify(formData))
+      navigate('/category')
+    }
   }
 
 
@@ -48,11 +53,7 @@ const RegistrationForm = () => {
  
 
  
-    const isFormFilled = Object.keys(formData).every((key) => formData[key] !== '');
-    if(isFormFilled && formData.check && Object.keys(formErrorValues).length === 0) {
-      localStorage.setItem('fornData', JSON.stringify(formData))
-      navigate('/category')
-    }
+  
     
   
 
