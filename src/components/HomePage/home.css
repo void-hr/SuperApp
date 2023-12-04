@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
-    height: 80vh;
+    height: 85vh;
     width: 85%;
     column-gap: 60px;
     row-gap: 20px;
@@ -58,7 +58,7 @@
     
 }
 .p_email{
-    font-size: xx-large;
+    font-size: 180%;
 
 }
 .p_uname{
@@ -90,4 +90,144 @@
     padding-left: 7%;
     height: 3.5rem;
     border-radius: 50px;
+}
+
+.weather_card{
+    grid-area: 3 / 1 / 4 / 3 ;
+    background-color: #101744;
+    border-radius: 33px;
+    height: 100%;
+    line-height: normal;
+
+}
+
+.date_time{
+    width: 100%;
+    border-radius: 33px 33px 0px 0px ;
+    background-color: #FF4ADE;
+    height: 30%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    gap: 20%;
+    align-items: center;
+    font-size: xxx-large;
+
+    font-weight: bold;
+}
+
+.temperature{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70%;
+    border-radius: 0px 0px 33px 33px;
+    font-size: xxx-large;
+
+
+}
+ .climate_img{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    align-items: center;
+    justify-content: space-between;
+    font-size: xx-large;
+    height: 70%;
+    
+
+
+}
+
+.climate_img img {
+   -webkit-filter: invert(100%);
+   margin: 0;
+   padding: 0;
+   height: 70px;
+   
+}
+
+.tempe_pressure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 70%;
+    /* background-color: black; */
+}
+
+.temp_pressure span{
+    font-size: small;
+    font-weight: normal;
+}
+
+.wind_humid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 70%;
+    /* background-color: black; */
+
+}
+
+.celcius{
+    font-size: xxx-large;
+    font-weight: bold;
+
+
+}
+
+/* span */
+.humidity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: small;
+}
+
+.winds {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+    font-size:x-large;
+    font-weight: bold;
+    word-wrap: break-word;
+    width: 80%;
+    
+    transform: translateY(7px);
+
+}
+
+.km {
+    font-size: medium;
+    font-weight: normal;
+
+}
+
+.pressure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    word-wrap: break-word;
+    width: 70%;
+    font-size: small;
+
+} 
+
+.temperature p {
+    padding: 0;
+    margin: 0;
+}
+
+/* divider */
+
+.divider {
+    height: 50%;
+    width: 1.367px;;
+    background: white;
 }
