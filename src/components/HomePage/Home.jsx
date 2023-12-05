@@ -1,3 +1,4 @@
+import AllNotes from './AllNotes';
 import './home.css'
 import NewsCard from './NewsCard';
 // import { useEffect, useState } from 'react'
@@ -33,7 +34,7 @@ const Home = () => {
     <div className='outer_grid_container'>
         <div className="inner_grid_container">
             <ProfileCard />
-        
+            <AllNotes />
             <NewsCard dateTime={dateTime}/>
             <WeatherCard dateTime={dateTime}/>
         
