@@ -8,6 +8,7 @@ import NewsCard from './NewsCard';
 
 import ProfileCard from './ProfileCard';
 import WeatherCard from './WeatherCard';
+import CountdownTimer from './CountdownTimer';
 
 
 
@@ -37,7 +38,9 @@ const Home = () => {
             <AllNotes />
             <NewsCard dateTime={dateTime}/>
             <WeatherCard dateTime={dateTime}/>
-        
+          <div className="timer_container">
+            <CountdownTimer />
+          </div>
         </div>
     </div>
   )
