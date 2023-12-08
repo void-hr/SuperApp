@@ -1,7 +1,8 @@
+import Entertainment from "../../components/HomePage/Entertainment"
 
 const EntertainmentPage = () => {
   return (
-    <div>EntertainmentPage</div>
+    <Entertainment />
   )
 }
 

@@ -449,3 +449,80 @@ height: 90%;
 .countdown-text{
     font-size: xx-large;
 }
+
+.btn {
+    grid-area: 6/6/6/6;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btns{
+    background-color: #148A08;
+    border: none;
+    border-radius: 33px;
+    color: white;
+    padding: 20px 34px ;
+    font-size: large;
+    line-height: 0%;
+    cursor: pointer;
+}
+
+/* Entertainment Page */
+.entertainment_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.nav{ 
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+
+}
+
+.nav p {
+    font-size: 3rem;
+}
+
+.profile_logo{
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../../assets/images/profile.png');
+    cursor: pointer;
+}
+
+.inner_e_container{
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;}
+
+.e_title{
+    padding-left:5%;
+    margin: 0;
+     font-size: xx-large;
+}
+
+
+.movies_e_categories{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    margin-top: 2rem;
+    background-color: #101744;
+    width: 100%;
+    /* height: 20%; */
+}

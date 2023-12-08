@@ -9,11 +9,17 @@ import NewsCard from './NewsCard';
 import ProfileCard from './ProfileCard';
 import WeatherCard from './WeatherCard';
 import CountdownTimer from './CountdownTimer';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Home = () => {
 
+  const navigate = useNavigate();
+  const handleBrowse = (e) => {
+      e.preventDefault();
+      navigate('/entertainment')
+  }
 
   const dateTime = () => {
     // Date
@@ -40,6 +46,10 @@ const Home = () => {
             <WeatherCard dateTime={dateTime}/>
           <div className="timer_container">
             <CountdownTimer />
+          </div>
+          <div className="btn">
+          <button className='btns' onClick={(e)=> handleBrowse(e)}>Browse</button>
+
           </div>
         </div>
     </div>
