@@ -51,11 +51,10 @@ const Entertainment = () => {
   useEffect(()=> {
 
     const getMovieList = async () => {
-      const apiKey = 'API_KEY';
+      const apiKey = process.env.REACT_APP_MOVIES_KEY;
       const baseUrl = 'https://api.themoviedb.org/3';
 
       try {
-
         const genreMoviesList = commonGenres.map( async genre => {
           const response = await fetch(`${baseUrl}/discover/movie?api_key=${apiKey}&with_genres=${genre.id}&page=1&page_size=${4}`);
           const data = await response.json();
