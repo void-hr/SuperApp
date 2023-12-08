@@ -3,60 +3,24 @@ import humid from "../../assets/humid.svg";
 import wind from "../../assets/wind.svg";
 import { useEffect, useState } from 'react'
 
-export const dummyData ={'weather':  {
-    "id": 711,
-    "main": "Smoke",
-    "description": "smoke",
-    "icon": "50d"
-},'main': {
-    "temp": 296.2,
-    "feels_like": 295.84,
-    "temp_min": 296.2,
-    "temp_max": 296.2,
-    "pressure": 1018,
-    "humidity": 49
-},'wind':{
-    "speed": 2.06,
-    "deg": 320
-}}
 
 const WeatherCard = ({dateTime}) => {
 
  
 const [weatherData, setWeatherData] = useState({})
 useEffect(()=> {
-    
-    if(Object.keys(weatherData).length === 0){
-        
-        setWeatherData(dummyData)
-        
-    }else {
-
-        return () => null
-    }
-    
-    // const weatherDetails = async () => {
-        //     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Delhi&appid=${API_KEY}`)
-        //     const weather = await response.json();
-        //     setWeatherData({'weather': weather["weather"][0],'main': weather["main"], 'wind': weather["wind"]})
-        // }
-        // weatherDetails();
+ 
+    const weatherDetails = async () => {
+            const apiKey = process.env.REACT_APP_WEATHER_KEY
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Delhi&appid=${apiKey}`)
+            const weather = await response.json();
+            setWeatherData({'weather': weather["weather"][0],'main': weather["main"], 'wind': weather["wind"]})
+        }
+        weatherDetails();
         
     },[weatherData])
     
     
-    
-
-
-
-// This is to handle date & time 
-
-
-
-
-
-
-
     return (
         <div className='weather_card'>      
             <div className="date_time">

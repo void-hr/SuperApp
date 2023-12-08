@@ -1,4 +1,4 @@
-import Entertainment from "../../components/HomePage/Entertainment"
+import Entertainment from "../../components/Entertainment/Entertainment"
 
 const EntertainmentPage = () => {
   return (

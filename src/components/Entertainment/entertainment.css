@@ -1,0 +1,83 @@
+* Entertainment Page */
+.entertainment_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.nav{ 
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+
+}
+
+.nav p {
+    font-size: 3rem;
+}
+
+.profile_logo{
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../../assets/images/profile.png');
+    cursor: pointer;
+}
+
+.inner_e_container{
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.e_title{
+    padding-left:5%;
+    margin: 0;
+     font-size: xx-large;
+}
+
+
+.movies_e_categories{
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 2rem;
+    width: 90%;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.movies_list{
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 7%;
+}
+
+.movies_list img {
+    width: 21%;
+    border-radius: 9.16px;
+    object-position: center;
+    
+}
+
+.movie_e_data{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.e_cat_title{
+    color: #878787;
+    font-size: xx-large;
+}

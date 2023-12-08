@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
-
+import './entertainment.css'
 const genres = [
     {
       "id": 28,
@@ -41,17 +40,17 @@ const genres = [
     }
   ]
 
-
+console.log(process.env)
 const Entertainment = () => {
   const navigate = useNavigate();
-  const genrelist = localStorage.getItem('categories').split(',');
+  const genrelist = localStorage?.getItem('categories').split(',') || '';
   const commonGenres = genres.filter((elem,id)=> genrelist.includes(elem.name));
   const [movie, setMovie ] = useState([])
 
   useEffect(()=> {
 
     const getMovieList = async () => {
-      const apiKey = 'API_KEY';
+      const apiKey = process.env.REACT_APP_MOVIES_KEY;
       const baseUrl = 'https://api.themoviedb.org/3';
 
       try {
@@ -77,9 +76,6 @@ const Entertainment = () => {
 
  
 
-  useEffect(()=> {
-    console.log(movie)
-  },[movie])
   const handleToggle = (e) => {
     e.preventDefault();
     navigate('/');
