@@ -40,7 +40,7 @@ const genres = [
     }
   ]
 
-console.log(process.env)
+
 const Entertainment = () => {
   const navigate = useNavigate();
   const genrelist = localStorage?.getItem('categories').split(',') || '';
