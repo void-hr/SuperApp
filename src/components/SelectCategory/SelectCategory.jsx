@@ -71,7 +71,7 @@ const data = [
         image: fiction
     },]
 
-    const SelectCategory = () => {
+    const SelectCategory = ({setIsHome}) => {
         const navigate = useNavigate();
         const [category, setCategory] = useState([]); 
         const [categoryError, setCategoryError] = useState(true); 
@@ -94,9 +94,12 @@ const data = [
 
         useEffect(()=> {
           localStorage.setItem('categories', category)
+          if(localStorage.getItem('categories')) {
+            setIsHome(true);}
         }, [category])
       
-       const handleSubmit = () => {
+       const handleSubmit = (e) => {
+        e.preventDefault();
         if(category.length >=3) {
             navigate('/')
         }
@@ -131,7 +134,7 @@ const data = [
                   <img src={elem.image} alt="" />
                 </div>
               ))}
-             {!categoryError && <button className='next_page' onClick={()=> handleSubmit()}>Next Page</button>}
+             {!categoryError && <button className='next_page' onClick={(e)=> handleSubmit(e)}>Next Page</button>}
             </div>
           </div>
         );

@@ -1,8 +1,8 @@
 import SelectCategory from "../../components/SelectCategory/SelectCategory"
 
-const CategoryPage = () => {
+const CategoryPage = ({setIsHome}) => {
   return (
-    <SelectCategory />
+    <SelectCategory setIsHome={setIsHome}/>
   )
 }
 
