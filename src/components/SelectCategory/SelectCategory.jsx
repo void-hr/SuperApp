@@ -9,7 +9,7 @@ import fantasy from '../../assets/images/fantasy.png'
 import music from '../../assets/images/music.png'
 import fiction from '../../assets/images/fiction.png'
 import caution from '../../assets/warning.svg'
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import CategoryTag from './CategoryTag'
 import { useNavigate } from 'react-router-dom'
 
@@ -92,9 +92,9 @@ const data = [
           }
         };
 
-        useEffect(()=>{
-            localStorage.setItem('categories', category)
-        },[category])
+        useEffect(()=> {
+          localStorage.setItem('categories', category)
+        }, [category])
       
        const handleSubmit = () => {
         if(category.length >=3) {
@@ -110,7 +110,6 @@ const data = [
               </div>
               <p className='choose_title'>Choose your entertainment category</p>
               <div className='chip_container'>
-                {/* Assuming CategoryTag is a component to display selected categories */}
                 <CategoryTag category={category} setCategory={setCategory} setCategoryError={setCategoryError} />
               </div>
              {categoryError && <div className='cat_warning'>
