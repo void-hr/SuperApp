@@ -9,7 +9,7 @@ import fantasy from '../../assets/images/fantasy.png'
 import music from '../../assets/images/music.png'
 import fiction from '../../assets/images/fiction.png'
 import caution from '../../assets/warning.svg'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import CategoryTag from './CategoryTag'
 import { useNavigate } from 'react-router-dom'
 
@@ -91,10 +91,13 @@ const data = [
             setCategory((prev) => [...prev, clickedCat]);
           }
         };
+
+        useEffect(()=>{
+            localStorage.setItem('categories', category)
+        },[category])
       
        const handleSubmit = () => {
         if(category.length >=3) {
-            localStorage.setItem('categories', category)
             navigate('/')
         }
        }
