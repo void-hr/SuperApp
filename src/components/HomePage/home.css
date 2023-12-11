@@ -58,7 +58,7 @@
     
 }
 .p_email{
-    font-size: x-large;
+    font-size: clamp(1em, 1.2vw,xx-large);
 
 }
 .p_uname{
